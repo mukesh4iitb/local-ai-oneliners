@@ -1,38 +1,60 @@
 # local-ai-oneliners
 
+
+
 ## Ollama:
-   
-   ollama --version
 
-ollama list
+### sources:
 
-ollama  pull model_name
-
-ollama show model_name
-
-# To be more specific informations:
-# Show only the license information
-ollama show llama3.2 --license
-
-# Show the modelfile (template and parameters)
-ollama show llama3.2 --modelfile
-
-# Show the system prompt if defined
-ollama show llama3.2 --system
-
-# Show the prompt template
-ollama show llama3.2 --template
-
-ollama rm model_name
-
-ollama cp model_name1 model_name2
+* <https://oneuptime.com/blog/post/2026-02-02-ollama-model-management/view>
 
 
-Extract fields 2, 4, and 5 from file.txt:
+version:
 
-    awk '{print $2,$4,$5}' input.txt
+      ollama --version
 
+list all models: 
 
-Print each line where the 5th field is equal to ‘abc123’:
+      ollama list
 
-    awk '$5 == "abc123"' file.txt
+Download model:
+
+      ollama  pull model_name
+
+Detailed information of models:
+
+      ollama show model_name
+
+### Specific details of model:
+
+Show only the license information:
+      
+      ollama show model_name --license
+
+Parameters:
+
+      ollaman show model_name --parameters
+
+Template:
+
+      ollama show llama3.2 --template     
+      
+Show the modelfile (template and parameters):
+
+      ollama show llama3.2 --modelfile
+      
+Show the system prompt (if defined in model):
+
+      ollama show llama3.2 --system
+      
+Removing model:
+      
+      ollama rm model_name
+
+Coping/rename model:
+
+      ollama cp model_name1 model_name2
+      
+Size of all the ollama models:
+      
+      du -sh ~/.ollama
