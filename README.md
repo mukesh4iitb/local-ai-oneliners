@@ -1,19 +1,19 @@
-# local-ai-oneliners
+# Local-ai-oneliners
 
 
 
 ## Ollama:
 
-### sources:
+### Sources:
 
 * <https://oneuptime.com/blog/post/2026-02-02-ollama-model-management/view>
 
 
-version:
+Version:
 
       ollama --version
 
-list all models: 
+List all models: 
 
       ollama list
 
@@ -37,15 +37,15 @@ Parameters:
 
 Template:
 
-      ollama show llama3.2 --template     
+      ollama show model_name --template     
       
 Show the modelfile (template and parameters):
 
-      ollama show llama3.2 --modelfile
+      ollama show model_name --modelfile
       
 Show the system prompt (if defined in model):
 
-      ollama show llama3.2 --system
+      ollama show model_name --system
       
 Removing model:
       
